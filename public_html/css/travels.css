@@ -1,0 +1,116 @@
+.location
+{
+    background-color: #fff;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.location:hover
+{
+    background-color: #d9e5ef;
+}
+
+.locationtitle
+{
+    background: transparent;
+    opacity: 1;
+    float: left;
+    text-align: left;
+    padding-left: 2em;
+    font-family:verdana;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.locationdate
+{
+    background: transparent;
+    opacity: 1;
+    float: right;
+    text-align: right;
+    padding-right: 2em;
+    font-family:verdana;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+#gallery
+{
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+}
+
+#gallery img {
+    position: absolute;
+    margin: 8px -366px auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    padding: 10px;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+}
+
+#gallery span:hover
+{
+    height: 30px;
+    width: 200px;
+    display: block;
+    bottom: -30px;
+    line-height: 25pt;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+#gallery img.selected
+{
+    opacity: 1;
+}
+
+#galleryinfo
+{
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+#gallerytitle
+{
+    font-size: 16px;
+    float: left;
+    text-align: left;
+}
+
+#gallerydate
+{
+    text-align: right;
+    font-size: 8pt;
+}
+
+#galleryselect 
+{
+    text-align: center;
+    padding-top: 2em;
+}
+
+#galleryselect span 
+{
+    position: relative;
+}
+
+#galleryselect span img
+{
+    border: 1px solid #ccc;
+    opacity: 0.4;
+}
+
+#galleryselect span img:hover
+{
+    border: 1px solid #ccc;
+    opacity: 1.0;
+}

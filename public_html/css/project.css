@@ -1,0 +1,44 @@
+.projectabout
+{
+    font-family:verdana;
+    font-size: 8pt;
+    padding: 2em;
+}
+
+.project
+{
+    background-color: #fff;
+    width: 100%;
+    float: left;
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.project:hover
+{
+    background-color: #d9e5ef;
+}
+
+.projecttitle
+{
+    padding-left: 2em;
+    font-family:verdana;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.projectdescription
+{
+    font-family:verdana;
+    font-size: 8pt;
+    padding-left: 3.5em;
+}
+
+.projectlinks
+{
+
+    font-family:verdana;
+    font-size: 8pt;
+    padding-left: 7em;
+}
