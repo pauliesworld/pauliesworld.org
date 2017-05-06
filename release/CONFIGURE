@@ -1,13 +1,22 @@
+#
+# Copyright (c) 2017, Paul Johnson <paulie@pauliesworld.org>. All rights reserved.
+#
+# pauliesworld.org source
+# File: CONFIGURE
+#
+
 # Path variables
 $URL =          "http://www.pauliesworld.org/";
 $BLOGURL =      "http://blog.pauliesworld.org/";
 $HOME =         "/home/paulie/";
 $HOMEDIR =      "${HOME}www/";
 $SRCDIR =       "${HOME}release/src/";
+$APIDIR =	"${SRCDIR}api/";
+$PAGEDIR =      "${SRCDIR}pages/";
 $CNTDIR =       "${HOME}release/content/";
 $BLOGDIR =      "${HOME}release/content/blog/";
 $PRJTDIR =      "${HOME}release/content/projects/";
-$TRAVDIR =	"${HOME}release/content/travels/";
+$TRAVDIR =      "${HOME}release/content/travels/";
 
 # Binary paths
 $DATE =         "/bin/date";
@@ -21,21 +30,26 @@ use lib '/home/paulie/perl/usr/lib/perl5/site_perl/5.8.8/';
 # Perl modules necessary to run PauliesWorld.org
 use CGI qw(:param);
 use CGI::Carp qw(fatalsToBrowser);
-use Fcntl qw(:DEFAULT :flock);
-use File::Basename;
-use Digest::MD5 qw(md5 md5_hex md5_base64);
-use HTML::Parse;
-use HTML::FormatText;
 
-# Include in all necessary Perl source files
-require "${SRCDIR}framework.pl";
-require "${SRCDIR}home.pl";
-require "${SRCDIR}content.pl";
-require "${SRCDIR}about.pl";
-require "${SRCDIR}sourceview.pl";
-require "${SRCDIR}projects.pl";
-require "${SRCDIR}travels.pl";
-require "${SRCDIR}files.pl";
-require "${SRCDIR}resume.pl";
+# Include all webpage Perl source files
+require "${PAGEDIR}pworg_page_framework.pl";
+require "${PAGEDIR}pworg_page_home.pl";
+require "${PAGEDIR}pworg_page_about.pl";
+require "${PAGEDIR}pworg_page_blog.pl";
+require "${PAGEDIR}pworg_page_projects.pl";
+require "${PAGEDIR}pworg_page_resume.pl";
+require "${PAGEDIR}pworg_page_sourceview.pl";
+require "${PAGEDIR}pworg_page_travels.pl";
+
+# Include all backend API Perl source files
+require "${APIDIR}pworg_api_displayarticles.pl";
+require "${APIDIR}pworg_api_displayarticle.pl";
+require "${APIDIR}pworg_api_searcharticles.pl";
+require "${APIDIR}pworg_api_openfile.pl";
+require "${APIDIR}pworg_api_getarticleauthor.pl";
+require "${APIDIR}pworg_api_getarticlecontent.pl";
+require "${APIDIR}pworg_api_getarticleheading.pl";
+require "${APIDIR}pworg_api_getdate.pl";
+require "${APIDIR}pworg_api_openfile.pl";
 
 1;

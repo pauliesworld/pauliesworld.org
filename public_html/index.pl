@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-require "CONFIGURE";
+require "/home/paulie/release/CONFIGURE";
 
 # Browser parameter variables
 $page = param('page');
@@ -8,4 +8,4 @@ $query = param('query');
 $content = param('content');
 $year = param('year');
 
-pwFramework($page,$query,$HOMEDIR,$SRCDIR,$BLOGDIR,0,$year);
+pworg_page_framework($page,$query,$HOMEDIR,$SRCDIR,$BLOGDIR,0,$year);
