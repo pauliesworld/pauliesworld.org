@@ -1,7 +1,8 @@
 #!/usr/bin/perl
 
 #
-# Copyright (c) 2017, Paul Johnson <paulie@pauliesworld.org>. All rights reserved.
+# Copyright (c) 2017, Paul Johnson <paulie@pauliesworld.org>.
+# All rights reserved.
 #
 # pauliesworld.org source
 # File: pworg_api_getdate.pl

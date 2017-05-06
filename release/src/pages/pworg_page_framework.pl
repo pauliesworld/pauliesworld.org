@@ -1,7 +1,8 @@
 #!/usr/bin/perl
 
 #
-# Copyright (c) 2017, Paul Johnson <paulie@pauliesworld.org>. All rights reserved.
+# Copyright (c) 2017, Paul Johnson <paulie@pauliesworld.org>.
+# All rights reserved.
 #
 # pauliesworld.org source
 # File: pworg_page_framework.pl
@@ -92,10 +93,10 @@ HTML
 
 print(STDOUT <<HTML);
         <link rel="shortcut icon" href="${URL}img/icon.ico">
-        <meta name="keywords" content="pauliesworld paulie paulies world paul johnson broomfield colorado perl c java cpp solaris oracle sun unavco cu zfs storage dtrace zfssa">
+        <meta name="keywords" content="pauliesworld paulie paulies world paul johnson broomfield colorado perl c java cpp solaris oracle sun unavco cu zfs storage dtrace zfssa amazon aws">
         <meta name="description" content="$description">
-        <meta name="published_date" content="09/09/16 13:32:04 MST">
-        <meta name="date" content="09/09/16 13:32:04 MST">
+        <meta name="published_date" content="05/06/17 13:26:04 MST">
+        <meta name="date" content="05/06/17 13:26:04 MST">
         <meta name="generator" content="PauliesWorld.org" >
         <meta name="author" content="Paul Johnson" >
         <meta name="venue" content="www.pauliesworld.org" >
