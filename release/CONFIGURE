@@ -22,11 +22,6 @@ $TRAVDIR =      "${HOME}release/content/travels/";
 $DATE =         "/bin/date";
 $BASENAME =     "/bin/basename";
 
-# Kionic hosting does not have Parse and FormatText by default, so have to
-# install into a local directory and reference the modules via a local library
-# path.
-use lib '/home/paulie/perl/usr/lib/perl5/site_perl/5.8.8/';
-
 # Perl modules necessary to run PauliesWorld.org
 use CGI qw(:param);
 use CGI::Carp qw(fatalsToBrowser);
