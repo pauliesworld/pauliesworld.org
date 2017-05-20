@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2017, Paul Johnson <paulie@pauliesworld.org>.
+ * All rights reserved.
+ *
+ * pauliesworld.org source
+ * File: framework.css
+ */
+
 @charset "utf-8";
 
 html, body 
@@ -88,7 +96,7 @@ a:hover
     background-color: #fff;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     padding-top: 3em;
     padding-bottom: 3em;
