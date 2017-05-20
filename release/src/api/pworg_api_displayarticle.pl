@@ -15,7 +15,7 @@ sub pworg_api_displayarticle()
     
     ($HOMEDIR,$SRCDIR,$BLOGDIR,$articleID) = @_;
 
-    $articlepath = `$BASENAME ${articleID}`;
+    $articlepath = `${BASENAME} ${articleID}`;
     $contentptr=pworg_api_openfile("${BLOGDIR}${articlepath}");
 
     if ($contentptr == -1) {
@@ -29,6 +29,7 @@ sub pworg_api_displayarticle()
     $content = pworg_api_getarticlecontent(\@content);
 
     $articleID =~ s/.txt//;
+    chomp($articleID);
 
     print (STDOUT <<HTML);
             	<div class="newsheading">
@@ -37,12 +38,12 @@ sub pworg_api_displayarticle()
                     </div>
                 </div>
             	<div class="newscontent">
-                    <br> $content <br><br>
+                    <br> $content \t\t\t\t\t\t<br><br>
                     <div class="newsauthor">
                         posted by $author
                     </div>
                     <div class="newsdate">
-		        $thisdate
+                        $thisdate
                     </div>
                 </div>
 HTML

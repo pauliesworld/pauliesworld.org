@@ -12,7 +12,7 @@ sub pworg_page_projects()
 {
     ($PRJTDIR) = @_;
 
-    @projecttable = `ls -1 ${PRJTDIR}`;
+    @projecttable = `${LS} -1 ${PRJTDIR}`;
 
     foreach $project (@projecttable) {
         chomp($project);
@@ -77,37 +77,37 @@ sub pworg_page_projects()
             $desc .= "<br>\n";
         }
 
-        print "\t\t<div class=\"project\">\n";
-        print "\t\t    <div class=\"projecttitle\">\n";
-        print "\t\t\t$project_title \n";
-        print "\t\t    </div>\n";
-        print "\t\t    <div class=\"projectdescription\">\n";
+        print "\t\t\t\t<div class=\"project\">\n";
+        print "\t\t\t\t\t<div class=\"projecttitle\">\n";
+        print "\t\t\t\t\t\t$project_title \n";
+        print "\t\t\t\t\t</div>\n";
+        print "\t\t\t\t\t<div class=\"projectdescription\">\n";
 
         foreach $desc (@project_description) {
-            print "\t\t\t$desc";
+            print "\t\t\t\t\t\t$desc";
         }
 
-        print "\t\t    </div>\n";
-        print "\t\t    <div class=\"projectlinks\">\n";
+        print "\t\t\t\t\t</div>\n";
+        print "\t\t\t\t\t<div class=\"projectlinks\">\n";
 
         if ($project_demo =~ m/TRUE/) {
-            print "\t\t\t[ <a href=\"${project_demourl}\">Demo</a> ] \n";
+            print "\t\t\t\t\t\t[ <a href=\"${project_demourl}\">Demo</a> ] \n";
         }
 
         if ($project_source =~ m/TRUE/) {
-            print "\t\t\t[ <a href=\"${project_sourceurl}\">View Source</a> ] \n";
+            print "\t\t\t\t\t\t[ <a href=\"${project_sourceurl}\">View Source</a> ] \n";
         }
 
         if ($project_download =~ m/TRUE/) {
-            print "\t\t\t[ <a href=\"${project_downloadurl}\">Download</a> ] \n";
+            print "\t\t\t\t\t\t[ <a href=\"${project_downloadurl}\">Download</a> ] \n";
         }
 
         if ($project_paper =~ m/TRUE/) {
-            print "\t\t\t[ <a href=\"${project_paperurl}\">Paper</a> ] \n";
+            print "\t\t\t\t\t\t[ <a href=\"${project_paperurl}\">Paper</a> ] \n";
         }
 
-        print "\t\t    </div>\n";
-        print "\t\t</div>\n";
+        print "\t\t\t\t\t</div>\n";
+        print "\t\t\t\t</div>\n";
     }
 }
 

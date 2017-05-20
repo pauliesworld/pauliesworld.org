@@ -63,7 +63,7 @@ sub pworg_page_travels()
 HTML
 
         for ($i=1; $i <= $description_size; $i++) {
-            print "\t\t    <img src=\"/img/travels/${param_location}-${i}.png\" height=\"400\" alt=\"${param_location}-${i}\">\n";
+            print "\t\t\t\t\t<img src=\"/img/travels/${param_location}-${i}.png\" height=\"400\" alt=\"${param_location}-${i}\">\n";
         }
     
         print (STDOUT <<HTML);
@@ -72,14 +72,14 @@ HTML
                     <span class="selected"><img src="/img/travels/${param_location}-0s.png" height="60" alt="${param_location}-0s"></span>
 HTML
         for ($i=1; $i < $description_size; $i++) {
-            print "\t\t    <span><img src=\"/img/travels/${param_location}-${i}s.png\" height=\"60\" alt=\"${param_location}-${i}s\"></span>\n";
+            print "\t\t\t\t\t<span><img src=\"/img/travels/${param_location}-${i}s.png\" height=\"60\" alt=\"${param_location}-${i}s\"></span>\n";
         }
     
         print (STDOUT <<HTML);
                 </div>
 HTML
     } else {
-        @traveltable = `ls -1 ${TRAVDIR}`;
+        @traveltable = `${LS} -1 ${TRAVDIR}`;
         @traveltable = reverse(@traveltable);
 
         foreach $location (@traveltable) {

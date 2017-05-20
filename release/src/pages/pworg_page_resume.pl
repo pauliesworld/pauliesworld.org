@@ -17,7 +17,9 @@ sub pworg_page_resume()
                     <br><br>
                     <img id="resume" src="/resume/resume.png" width="800" usemap="#resume" alt="resume">
                     <map id="resume-map" name="resume">
-                        <area shape="rect" coords="460,70,625,88" href="http://www.pauliesworld.org" alt="www.pauliesworld.org">
+                        <div class="effectback">
+                        <area class="effectfront" shape="rect" coords="460,70,625,88" href="http://www.pauliesworld.org" alt="www.pauliesworld.org">
+                        </div>
                         <area shape="rect" coords="450,90,625,108" href="mailto:paulie\@pauliesworld.org" alt="paulie\@pauliesworld.org" >
                         <area shape="rect" coords="447,110,625,126" href="http://www.github.com/pauliesworld" alt="github.com/pauliesworld">
                         <area shape="rect" coords="435,128,625,144" href="http://www.linkedin.com/in/pjcolorado" alt="linkedin.com/in/pjcolorado" >

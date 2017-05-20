@@ -13,13 +13,13 @@ sub pworg_api_searcharticles()
     ($HOMEDIR,$SRCDIR,$BLOGDIR,$query) = @_;
 
     $i += 1;
-    @contentfiles = `ls -1 ${BLOGDIR}*txt;`;
+    @contentfiles = `${LS} -1 ${BLOGDIR}*txt;`;
     @contentfiles = reverse(@contentfiles);
 
     foreach $file (@contentfiles) {
         chomp($file);
 
-        if (`grep -i '$query' $file`) {
+        if (`${GREP} -i '$query' $file`) {
             push(@foundfiles,$file);
         }
     }
@@ -32,7 +32,7 @@ sub pworg_api_searcharticles()
                     <div class="searchresults">
 HTML
     foreach $file (@foundfiles) {
-        $articleID = `$BASENAME $file`;
+        $articleID = `${BASENAME} $file`;
         $articleID =~ s/.txt//g;
         $contentptr = pworg_api_openfile("$file");
         @content = @$contentptr;

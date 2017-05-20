@@ -11,7 +11,7 @@
 sub pworg_page_framework() 
 {
     ($page,$query,$HOMEDIR,$SRCDIR,$BLOGDIR,$blog,$year)=@_;
-    
+   
     $date = `${DATE} +'%B %e, %Y'`;
     chomp($date);
     $description="PauliesWorld.org is the personal website of Paul Johnson";
@@ -22,12 +22,13 @@ sub pworg_page_framework()
 
         if ($blog && $articleID) {
             $page = $articleID;
-            $header = `grep 'Heading:' ${BLOGDIR}${articleID}.txt`;
+            $header = `${GREP} 'Heading:' ${BLOGDIR}${articleID}.txt`;
             $header =~ s/Heading: //;
             $page = $header;
         }
 
         $title = $page;
+        chomp($title);
 
     } else {
         $title = $page;
@@ -48,7 +49,7 @@ sub pworg_page_framework()
             if (param('location')) {
                 $location = param('location');
                 chomp($location);
-                $title = `grep 'Title:' ${TRAVDIR}${location}.txt`;
+                $title = `${GREP} 'Title:' ${TRAVDIR}${location}.txt`;
                 $title =~ s/Title: //;
                 chomp($title);
             }
@@ -105,6 +106,24 @@ print(STDOUT <<HTML);
         <meta http-equiv="content-language" content="en-US" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge" >
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+
+<style type="text/css">
+.effectback {
+  display: block;
+  background: url('https://farm8.staticflickr.com/7042/6873010155_d4160a32a2_s.jpg') no-repeat;
+    margin: 0 auto;
+}
+.effectfront {
+  opacity: 0;
+  border: none;
+  margin: 0 auto;
+}
+.effectfront:hover {
+  opacity: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+</style>
     </head>
     <body>
         <div id="container">

@@ -15,7 +15,7 @@ sub pworg_api_displayarticles()
 
     ($HOMEDIR,$SRCDIR,$BLOGDIR,$nope,$year) = @_;
 
-    @contentfiles = `ls -1 ${BLOGDIR}*txt`;
+    @contentfiles = `${LS} -1 ${BLOGDIR}*txt`;
     @contentfiles = reverse(@contentfiles);
     $i += 0;
 
@@ -28,7 +28,7 @@ sub pworg_api_displayarticles()
 
     foreach $file (@contentfiles) {
         $newyear++;
-	$file = `$BASENAME $file`;
+	$file = `${BASENAME} $file`;
 	$articleID = $file;
 
    	if ($articleID =~ m/txt/) {
@@ -53,14 +53,14 @@ sub pworg_api_displayarticles()
     %seen = ();
     @archive = grep { ! $seen{ $_ }++ } @archive;
 
-    print "\t\t<div class=\"newsarchive\">\n\t\t    <h1>Blog Archive by Year</h1>\n";
+    print "\t\t\t\t<div class=\"newsarchive\">\n\t\t\t\t\t<h1>Blog Archive by Year</h1>\n";
 
     foreach $yid (@archive) {
-        print "\t\t    <a href=\"${URL}?page=home\&amp\;year=${yid}\">${yid}</a>\n";
+        print "\t\t\t\t\t<a href=\"${URL}?page=home\&amp\;year=${yid}\">${yid}</a>\n";
     }
 
     print (STDOUT <<HTML);
-		</div>
+                </div>
 HTML
 
 }

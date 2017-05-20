@@ -20,8 +20,10 @@ $PRJTDIR =      "${HOME}release/content/projects/";
 $TRAVDIR =      "${HOME}release/content/travels/";
 
 # Binary paths
-$DATE =         "/bin/date";
 $BASENAME =     "/bin/basename";
+$DATE =         "/bin/date";
+$GREP =         "/bin/grep";
+$LS =           "/bin/ls";
 
 # Perl modules necessary to run PauliesWorld.org
 use CGI qw(:param);
