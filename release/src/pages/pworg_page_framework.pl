@@ -84,6 +84,8 @@ HTML
             print "        <link rel=\"stylesheet\" type=\"text/css\" href=\"${URL}css/about.css\">\n";
         } elsif ($title =~ m/Project/) {
             print "        <link rel=\"stylesheet\" type=\"text/css\" href=\"${URL}css/project.css\">\n";
+        } elsif ($page =~ m/resume/) {
+            print "        <link rel=\"stylesheet\" type=\"text/css\" href=\"${URL}css/resume.css\">\n";
         } elsif ($page =~ m/travels/) {
             print "        <link rel=\"stylesheet\" type=\"text/css\" href=\"${URL}css/travels.css\">\n";
         } elsif ($page =~ m/source/) {
@@ -106,24 +108,6 @@ print(STDOUT <<HTML);
         <meta http-equiv="content-language" content="en-US" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge" >
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-
-<style type="text/css">
-.effectback {
-  display: block;
-  background: url('https://farm8.staticflickr.com/7042/6873010155_d4160a32a2_s.jpg') no-repeat;
-    margin: 0 auto;
-}
-.effectfront {
-  opacity: 0;
-  border: none;
-  margin: 0 auto;
-}
-.effectfront:hover {
-  opacity: 1;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-}
-</style>
     </head>
     <body>
         <div id="container">

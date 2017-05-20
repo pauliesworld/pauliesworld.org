@@ -11,8 +11,6 @@
 sub pworg_page_resume()
 {
     print (STDOUT <<HTML);
-                <script type="text/javascript" src="/js/overlib.js">
-                </script>
                 <center>
                     <br><br>
                     <img id="resume" src="/resume/resume.png" width="800" usemap="#resume" alt="resume">
@@ -23,12 +21,12 @@ sub pworg_page_resume()
                         <area shape="rect" coords="450,90,625,108" href="mailto:paulie\@pauliesworld.org" alt="paulie\@pauliesworld.org" >
                         <area shape="rect" coords="447,110,625,126" href="http://www.github.com/pauliesworld" alt="github.com/pauliesworld">
                         <area shape="rect" coords="435,128,625,144" href="http://www.linkedin.com/in/pjcolorado" alt="linkedin.com/in/pjcolorado" >
-                        <area shape="rect" coords="65,330,140,430" href="#" onmouseover="return overlib('<img src=/img/cu-peak.jpg width=600 height=338>',CAPTION,'James Peak - Alice, CO',WIDTH,600,HAUTO,VAUTO);" onmouseout="return nd()" alt="cu2-peak.jpg">
-                        <area shape="rect" coords="65,555,140,655" href="#" onmouseover="return overlib('<img src=/img/amzn-peak.jpg width=600 height=338>',CAPTION,'Northstar Mountain - Hoosier Pass, CO',WIDTH,600,HAUTO,VAUTO);" onmouseout="return nd()" alt="amzn-peak.jpg">
-                        <area shape="rect" coords="65,880,140,980" href="#" onmouseover="return overlib('<img src=/img/fishworks-peak.jpg width=600 height=338>',CAPTION,'Sniktau - Loveland Pass, CO',WIDTH,600,HAUTO,VAUTO);" onmouseout="return nd()" alt="fishworks-peak.jpg">
-                        <area shape="rect" coords="65,1230,140,1330" href="#" onmouseover="return overlib('<img src=/img/oracle-peak.jpg width=600 height=338>',CAPTION,'South Arapaho Peak - Eldora, CO',WIDTH,600,HAUTO,VAUTO);" onmouseout="return nd()" alt="oracle-peak.jpg">
-                        <area shape="rect" coords="65,1490,140,1590" href="#" onmouseover="return overlib('<img src=/img/sun-peak.jpg width=600 height=338>',CAPTION,'Shoshoni Peak - Ward, CO',WIDTH,600,HAUTO,VAUTO);" onmouseout="return nd()" alt="sun-peak.jpg">
-                        <area shape="rect" coords="65,1745,140,1845" href="#" onmouseover="return overlib('<img src=/img/unavco-peak.jpg width=600 height=338>',CAPTION,'Grizzly Peak - Loveland Pass, CO',WIDTH,600,HAUTO,VAUTO);" onmouseout="return nd()" alt="unavco-peak.jpg">
+                        <area shape="rect" coords="65,330,140,430" class="lightbox" href="#cu" alt="cu-peak.jpg">
+                        <area shape="rect" coords="65,555,140,655" class="lightbox" href="#amzn" alt="amzn-peak.jpg"> 
+                        <area shape="rect" coords="65,880,140,980" class="lightbox" href="#fw" alt="fishworks-peak.jpg">
+                        <area shape="rect" coords="65,1230,140,1330" class="lightbox" href="#orcl" alt="oracle-peak.jpg">
+                        <area shape="rect" coords="65,1490,140,1590" class="lightbox" href="#sun" alt="sun-peak.jpg">
+                        <area shape="rect" coords="65,1745,140,1845" class="lightbox" href="#unavco" alt="unavco-peak.jpg">
                     </map>
                     <br><br>
                     <div class="hidden">
@@ -104,6 +102,12 @@ sub pworg_page_resume()
                              xxx xxxxxx Dr. Broomfield, CO 80020 <br>
                              ☎ 720-xxx-xxxx ✉ paulie\@pauliesworld.org ♨ http://www.pauliesworld.org
                     </div>
+                    <a href="#_" class="lightbox" id="cu"><img src="./img/cu-peak.jpg"></a>
+                    <a href="#_" class="lightbox" id="amzn"><img src="./img/amzn-peak.jpg"></a>
+                    <a href="#_" class="lightbox" id="fw"><img src="./img/fishworks-peak.jpg"></a>
+                    <a href="#_" class="lightbox" id="orcl"><img src="./img/oracle-peak.jpg"></a>
+                    <a href="#_" class="lightbox" id="sun"><img src="./img/sun-peak.jpg"></a>
+                    <a href="#_" class="lightbox" id="unavco"><img src="./img/unavco-peak.jpg"></a>
                     <center>
                         <font color="#000000" face="arial" size="2">
                             [ <a href="./resume/resume-public.pdf">pdf format</a> ] <br><br><br>
